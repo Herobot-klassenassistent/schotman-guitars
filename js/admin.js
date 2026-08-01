@@ -111,7 +111,8 @@
     return wrap;
   }
 
-  function thumb(src) { return el("img", { src: src || "", class: "adm-thumb", alt: "" }); }
+  function absSrc(src) { return src && !/^(https?:|\/)/.test(src) ? "/" + src : (src || ""); }
+  function thumb(src) { return el("img", { src: absSrc(src), class: "adm-thumb", alt: "" }); }
 
   function imageField(item, k) {
     const box = el("div", { class: "adm-img" });
