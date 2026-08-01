@@ -463,6 +463,7 @@ a{color:inherit;text-decoration:none}
 
 /* ===== ADMIN EDITOR ===== */
 .adm{min-height:100vh}
+.adm [hidden],.adm-login[hidden]{display:none!important} /* the hidden attr must beat display:grid/flex below */
 .adm-login{position:fixed;inset:0;display:grid;place-items:center;padding:1.5rem;
   background:radial-gradient(120% 90% at 50% 10%,#1a1712,var(--bg) 60%)}
 .adm-login__box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:2.2rem;text-align:center}
