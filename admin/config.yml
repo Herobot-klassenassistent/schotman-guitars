@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: Herobot-klassenassistent/schotman-guitars
   branch: main
+  base_url: https://schotman.netlify.app
+  auth_endpoint: /.netlify/functions/auth
 
 # Robert uploads photos here; they're saved with the site
 media_folder: "assets/uploads"
