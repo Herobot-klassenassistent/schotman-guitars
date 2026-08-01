@@ -1,5 +1,8 @@
 /* ===== Schotman Guitars — interactions ===== */
 
+/* Apply saved theme ASAP (before paint) to avoid a flash */
+try { document.documentElement.setAttribute("data-theme", localStorage.getItem("schotman_theme") || "dark"); } catch (e) {}
+
 /* Load shop/blog content: prefer live edits (Netlify function/Blobs),
    fall back to the committed JSON (local dev or if functions are unavailable). */
 window.loadContent = function (type) {
@@ -24,6 +27,24 @@ window.loadContent = function (type) {
   const burger = $("#burger"), links = $(".nav__links");
   burger?.addEventListener("click", () => links.classList.toggle("open"));
   $$(".nav__links a").forEach(a => a.addEventListener("click", () => links.classList.remove("open")));
+
+  /* ===== dark / light theme toggle ===== */
+  const SUN = '<svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zM12 1a1 1 0 011 1v1a1 1 0 11-2 0V2a1 1 0 011-1zm0 18a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM3 11a1 1 0 010 2H2a1 1 0 010-2h1zm19 0a1 1 0 010 2h-1a1 1 0 010-2h1zM4.2 4.2a1 1 0 011.4 0l.7.7A1 1 0 015 6.3l-.8-.7a1 1 0 010-1.4zm13.1 13.1a1 1 0 011.4 0l.8.7a1 1 0 01-1.5 1.4l-.7-.8a1 1 0 010-1.3zM6.3 17.7a1 1 0 010 1.4l-.7.8a1 1 0 01-1.4-1.5l.7-.7a1 1 0 011.4 0zm12.1-13.5a1 1 0 011.4 1.4l-.8.7A1 1 0 0117.7 5l.7-.8z"/></svg>';
+  const MOON = '<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>';
+  let theme = document.documentElement.getAttribute("data-theme") || "dark";
+  if (links) {
+    const tbtn = document.createElement("button");
+    tbtn.type = "button"; tbtn.className = "theme-toggle"; tbtn.setAttribute("aria-label", "Licht of donker thema");
+    const paint = () => { tbtn.innerHTML = theme === "dark" ? SUN : MOON; };
+    paint();
+    tbtn.addEventListener("click", () => {
+      theme = theme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", theme);
+      try { localStorage.setItem("schotman_theme", theme); } catch (e) {}
+      paint();
+    });
+    links.appendChild(tbtn);
+  }
 
   /* reveal on scroll */
   const io = new IntersectionObserver((es) => {

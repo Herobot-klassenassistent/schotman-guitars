@@ -575,3 +575,31 @@ a{color:inherit;text-decoration:none}
   .ab__controls{flex-direction:column;align-items:stretch;gap:1.4rem}
   .ab__meters{width:100%}
 }
+
+/* ===== THEME TOGGLE + LIGHT MODE ===== */
+.theme-toggle{width:38px;height:38px;flex:none;border-radius:50%;border:1px solid var(--line);
+  background:transparent;color:var(--ink);cursor:pointer;display:grid;place-items:center;transition:.25s}
+.theme-toggle:hover{border-color:var(--gold);color:var(--gold-2)}
+.theme-toggle svg{width:18px;height:18px;fill:currentColor}
+
+:root[data-theme="light"]{
+  --bg:#f5f1ea; --bg2:#ece5d8; --panel:#ffffff; --ink:#1b1712; --muted:#6d655a;
+  --line:rgba(27,23,18,.14); --gold:#9c7530; --gold-2:#7a571d; --ember:#9a5f26;
+}
+[data-theme="light"] .nav.scrolled{background:rgba(245,241,234,.85)}
+[data-theme="light"] .nav__logo,[data-theme="light"] .footer__logo{filter:none;opacity:1}
+[data-theme="light"] .hero{background:radial-gradient(120% 90% at 70% 15%,#f0e8d8 0%,var(--bg) 55%)}
+[data-theme="light"] .wh{background:radial-gradient(120% 90% at 30% 10%,#f0e8d8 0%,var(--bg) 55%)}
+[data-theme="light"] .sound{background:linear-gradient(180deg,var(--bg),#efe8dc 40%,var(--bg))}
+[data-theme="light"] .config{background:linear-gradient(180deg,var(--bg),#efe8dc)}
+[data-theme="light"] .contact{background:linear-gradient(180deg,#efe8dc,var(--bg))}
+[data-theme="light"] .story__frame{background:radial-gradient(70% 70% at 50% 40%,#fff,#efe8dc)}
+[data-theme="light"] .nav__links{background:rgba(245,241,234,.98)}
+[data-theme="light"] .meter__bar{background:rgba(27,23,18,.08)}
+[data-theme="light"] .gallery__arrow{background:rgba(255,255,255,.85);color:var(--ink)}
+[data-theme="light"] .trust{background:var(--bg2)}
+/* keep the guitar "stages" gently contrasted so pale guitars still read on a light page */
+[data-theme="light"] .gcard__stage,[data-theme="light"] .config__stage,[data-theme="light"] .cert__hero,
+[data-theme="light"] .showcase .gcard__stage,[data-theme="light"] .feature__media{
+  background:radial-gradient(65% 65% at 50% 45%,rgba(27,23,18,.07),transparent 72%)}
+/* the audio scope + film stay dark on purpose (they're screens) */
