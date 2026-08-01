@@ -1,0 +1,374 @@
+{
+  "guitars": [
+    {
+      "id": "mt-cot",
+      "name": "MT-COT",
+      "subtitle": "Crown of Thorns — Marko Tervonen Signature",
+      "price": 3649,
+      "currency": "EUR",
+      "status": "in-stock",
+      "featured": true,
+      "image": "assets/guitars/mt-cot.png",
+      "wood": "Ash body, ebony fretboard",
+      "hardware": "Evertune · EMG 81",
+      "description": "The signature model of Marko Tervonen of Swedish metal band The Crown, built on the 8141 P Classic platform. A gradient finish fades from transparent white across the body to near-black at the headstock, with hand-finished artwork referencing The Crown's 2024 album 'Crown of Thorns' — the band name carried in the rear and fretboard inlays.",
+      "gallery": [
+        "assets/guitars/mt-cot/00.webp",
+        "assets/guitars/mt-cot/01.webp",
+        "assets/guitars/mt-cot/02.webp",
+        "assets/guitars/mt-cot/03.webp",
+        "assets/guitars/mt-cot/04.webp",
+        "assets/guitars/mt-cot/05.webp",
+        "assets/guitars/mt-cot/06.webp",
+        "assets/guitars/mt-cot/07.webp",
+        "assets/guitars/mt-cot/08.webp",
+        "assets/guitars/mt-cot/09.webp",
+        "assets/guitars/mt-cot/10.webp",
+        "assets/guitars/mt-cot/11.webp",
+        "assets/guitars/mt-cot/12.webp",
+        "assets/guitars/mt-cot/13.webp"
+      ],
+      "specs": [
+        {
+          "label": "Body",
+          "value": "Ash"
+        },
+        {
+          "label": "Neck",
+          "value": "Maple with 3-ply Mahogany / Maple / Mahogany laminate, Ultraflow set-neck"
+        },
+        {
+          "label": "Fingerboard",
+          "value": "Ebony, compound 12\" – 16\" radius"
+        },
+        {
+          "label": "Frets",
+          "value": "3mm jumbo, rounded ends"
+        },
+        {
+          "label": "Scale",
+          "value": "25.5\""
+        },
+        {
+          "label": "Bridge pickup",
+          "value": "EMG 81"
+        },
+        {
+          "label": "Bridge",
+          "value": "Evertune G model"
+        },
+        {
+          "label": "Tuners",
+          "value": "D'Addario auto-trim locking"
+        },
+        {
+          "label": "Extras",
+          "value": "Dual-LED battery indicator in volume knob, kill switch"
+        }
+      ],
+      "passport": {
+        "serial": "SCH-2024-MTCOT-01",
+        "buildYear": "2024",
+        "buildNo": 47,
+        "totalBuilt": 63,
+        "builtFor": "Marko Tervonen — The Crown",
+        "woodOrigin": "Ash and ebony selected by hand in Heino, Salland",
+        "signature": "Robert Schotman",
+        "pdf": "assets/passports/mt-cot-passport.pdf"
+      },
+      "diary": [
+        { "image": "assets/diary/mt-cot/01-body.webp", "title": "Raw body", "caption": "The mahogany body blank, freshly cut and ready to be shaped by hand." },
+        { "image": "assets/diary/mt-cot/02-top.webp", "title": "Carved top", "caption": "The body top carved and contoured — where the platform for the Crown of Thorns begins." },
+        { "image": "assets/diary/mt-cot/03-fretting.webp", "title": "Fretting", "caption": "Frets pressed into the ebony fingerboard, one at a time." },
+        { "image": "assets/diary/mt-cot/04-fretdress.webp", "title": "Fret dressing", "caption": "Every fret end rounded, levelled and polished by hand for a fast, smooth feel." },
+        { "image": "assets/diary/mt-cot/05-inlay.webp", "title": "Inlays", "caption": "Inlay work set into the board — the small details that make it unmistakably Schotman." },
+        { "image": "assets/diary/mt-cot/06-neck.webp", "title": "Neck & headstock", "caption": "The neck carved and the headstock shaped, ready to carry the Schotman name." },
+        { "image": "assets/diary/mt-cot/07-neckcomplete.webp", "title": "Neck complete", "caption": "Fingerboard, frets and neck finished and checked." },
+        { "image": "assets/diary/mt-cot/08-booth.webp", "title": "In the paint booth", "caption": "Into Robert's own booth — where the finish and hand artwork are sprayed." },
+        { "image": "assets/diary/mt-cot/09-paint.webp", "title": "Custom paint", "caption": "The gradient finish and Crown of Thorns artwork, applied by hand." },
+        { "image": "assets/diary/mt-cot/10-complete.webp", "title": "Completed", "caption": "Assembled, wired and set up — one of one, ready to play." }
+      ]
+    },
+    {
+      "id": "8141s-green",
+      "name": "8141 S Green",
+      "subtitle": "Salland Series · Marble Green",
+      "price": 3199,
+      "currency": "EUR",
+      "status": "in-stock",
+      "featured": true,
+      "image": "assets/guitars/8141s-green.png",
+      "wood": "Flamed maple / spalted top",
+      "hardware": "Railhammer · Schaller",
+      "description": "A 'marble green' superstrat with exotic wood combinations chosen to match the guitar's voice to its looks. Spalted maple top and headstock faceplate over a flamed maple laminate — no two are ever alike.",
+      "gallery": [
+        "assets/guitars/8141s-green/00.webp",
+        "assets/guitars/8141s-green/01.webp",
+        "assets/guitars/8141s-green/02.webp",
+        "assets/guitars/8141s-green/03.webp",
+        "assets/guitars/8141s-green/04.webp",
+        "assets/guitars/8141s-green/05.webp",
+        "assets/guitars/8141s-green/06.webp",
+        "assets/guitars/8141s-green/07.webp",
+        "assets/guitars/8141s-green/08.webp",
+        "assets/guitars/8141s-green/09.webp",
+        "assets/guitars/8141s-green/10.webp",
+        "assets/guitars/8141s-green/11.webp",
+        "assets/guitars/8141s-green/12.webp",
+        "assets/guitars/8141s-green/13.webp"
+      ],
+      "specs": [
+        {
+          "label": "Body",
+          "value": "Mahogany / yellow poplar with flamed maple laminate"
+        },
+        {
+          "label": "Top",
+          "value": "Spalted maple top layer & headstock faceplate"
+        },
+        {
+          "label": "Fingerboard",
+          "value": "Ebony, compound 12\" – 16\" radius"
+        },
+        {
+          "label": "Neck",
+          "value": "Modern D-to-C, dual-action truss rod"
+        },
+        {
+          "label": "Frets",
+          "value": "24 jumbo"
+        },
+        {
+          "label": "Scale",
+          "value": "25.5\""
+        },
+        {
+          "label": "Pickups",
+          "value": "Railhammer Anvil (bridge) / Chisel-N (neck), black"
+        },
+        {
+          "label": "Electronics",
+          "value": "Alpha 500K push-pull pots, Schotman toggle switch"
+        },
+        {
+          "label": "Hardware",
+          "value": "Schaller stop tail & STM bridge (chrome), Ratio locking tuners, Schaller S-locks"
+        },
+        {
+          "label": "Nut",
+          "value": "Graphtech"
+        },
+        {
+          "label": "Included",
+          "value": "ABS hard case"
+        }
+      ]
+    },
+    {
+      "id": "8141s-trans",
+      "name": "8141 S Transparant",
+      "subtitle": "Salland Series · Natural Transparent",
+      "price": 2799,
+      "currency": "EUR",
+      "status": "in-stock",
+      "featured": false,
+      "image": "assets/guitars/8141s-trans.png",
+      "wood": "Cherry body, spalted top",
+      "hardware": "Railhammer · Schaller",
+      "description": "Inspired by the classic Stratocaster but reworked for balance, weight and access to all 24 frets. A transparent finish over a 5mm spalted maple top lets the hand-selected grain speak, with a regional bog oak fingerboard grounding the sound.",
+      "gallery": [
+        "assets/guitars/8141s-trans/00.webp",
+        "assets/guitars/8141s-trans/01.webp",
+        "assets/guitars/8141s-trans/02.webp",
+        "assets/guitars/8141s-trans/03.webp",
+        "assets/guitars/8141s-trans/04.webp",
+        "assets/guitars/8141s-trans/05.webp",
+        "assets/guitars/8141s-trans/06.webp",
+        "assets/guitars/8141s-trans/07.webp",
+        "assets/guitars/8141s-trans/08.webp",
+        "assets/guitars/8141s-trans/09.webp",
+        "assets/guitars/8141s-trans/10.webp",
+        "assets/guitars/8141s-trans/11.webp",
+        "assets/guitars/8141s-trans/12.webp",
+        "assets/guitars/8141s-trans/13.webp",
+        "assets/guitars/8141s-trans/14.webp"
+      ],
+      "specs": [
+        {
+          "label": "Body",
+          "value": "Cherry"
+        },
+        {
+          "label": "Top",
+          "value": "5mm spalted maple"
+        },
+        {
+          "label": "Neck",
+          "value": "9-layer Maple / Bubinga / Blackwood, carbon-fibre rods + dual-action truss"
+        },
+        {
+          "label": "Fingerboard",
+          "value": "Regional bog oak"
+        },
+        {
+          "label": "Headstock",
+          "value": "Spalted maple faceplate"
+        },
+        {
+          "label": "Frets",
+          "value": "24 jumbo, 3mm rounded ends"
+        },
+        {
+          "label": "Scale",
+          "value": "25.5\""
+        },
+        {
+          "label": "Pickups",
+          "value": "Railhammer A-Grande (bridge) / Chisel-N (neck)"
+        },
+        {
+          "label": "Electronics",
+          "value": "3-way toggle, Alpha 500K push-pull pots"
+        },
+        {
+          "label": "Hardware",
+          "value": "Schaller stop tail & STM bridge, M6 locking tuners, Graphtech nut, S-locks"
+        }
+      ]
+    },
+    {
+      "id": "8141s-black",
+      "name": "8141 S Black",
+      "subtitle": "Salland Series · Black Gloss",
+      "price": 1999,
+      "salePrice": 1799,
+      "currency": "EUR",
+      "status": "in-stock",
+      "featured": false,
+      "image": "assets/guitars/8141s-black.png",
+      "wood": "Poplar body, ebony board",
+      "hardware": "Railhammer · Schaller",
+      "description": "Stealth. A Stratocaster-inspired superstrat in black gloss with a fast, flat modern-C neck, 13° headstock and a 24-fret cutaway for full access. Railhammer pickups drive the tone — all attitude, no distraction.",
+      "gallery": [
+        "assets/guitars/8141s-black/00.webp",
+        "assets/guitars/8141s-black/01.webp",
+        "assets/guitars/8141s-black/02.webp",
+        "assets/guitars/8141s-black/03.webp",
+        "assets/guitars/8141s-black/04.webp",
+        "assets/guitars/8141s-black/05.webp",
+        "assets/guitars/8141s-black/06.webp",
+        "assets/guitars/8141s-black/07.webp",
+        "assets/guitars/8141s-black/08.webp",
+        "assets/guitars/8141s-black/09.webp",
+        "assets/guitars/8141s-black/10.webp",
+        "assets/guitars/8141s-black/11.webp",
+        "assets/guitars/8141s-black/12.webp",
+        "assets/guitars/8141s-black/13.webp"
+      ],
+      "specs": [
+        {
+          "label": "Body",
+          "value": "Yellow poplar with 3-ply maple laminate, black gloss"
+        },
+        {
+          "label": "Neck",
+          "value": "Ultraflow set-neck, flattened modern C, carbon-fibre rods"
+        },
+        {
+          "label": "Fingerboard",
+          "value": "Ebony, compound 12\" – 16\", maple/blackwood binding"
+        },
+        {
+          "label": "Inlays",
+          "value": "White pearloid"
+        },
+        {
+          "label": "Frets",
+          "value": "3mm jumbo CN, rounded ends"
+        },
+        {
+          "label": "Scale",
+          "value": "25.5\""
+        },
+        {
+          "label": "Pickups",
+          "value": "Railhammer Anvil Black (bridge) / Chisel-N Black (neck)"
+        },
+        {
+          "label": "Electronics",
+          "value": "Alpha 500K push-pull pots, Schotman 3-way toggle"
+        },
+        {
+          "label": "Hardware",
+          "value": "Schaller STM bridge (black) & stop tail, Ratio tuners (chrome/black), Schaller S-locks"
+        }
+      ]
+    },
+    {
+      "id": "8141p-classic",
+      "name": "8141 P Classic",
+      "subtitle": "Salland Series · Classic",
+      "price": 2599,
+      "currency": "EUR",
+      "status": "in-stock",
+      "featured": false,
+      "image": "assets/guitars/8141p-classic.png",
+      "wood": "Mahogany, quilted maple top",
+      "hardware": "Railhammer · Schaller",
+      "description": "The classic take on the 8141 line — a mahogany body with a quilted maple top, advanced set-neck construction and a contoured cutaway for easy upper-body access. Timeless shape, modern build, unmistakably handmade in Heino.",
+      "gallery": [
+        "assets/guitars/8141p-classic/00.webp",
+        "assets/guitars/8141p-classic/01.webp",
+        "assets/guitars/8141p-classic/02.webp",
+        "assets/guitars/8141p-classic/03.webp",
+        "assets/guitars/8141p-classic/04.webp",
+        "assets/guitars/8141p-classic/05.webp",
+        "assets/guitars/8141p-classic/06.webp",
+        "assets/guitars/8141p-classic/07.webp",
+        "assets/guitars/8141p-classic/08.webp",
+        "assets/guitars/8141p-classic/09.webp",
+        "assets/guitars/8141p-classic/10.webp",
+        "assets/guitars/8141p-classic/11.webp",
+        "assets/guitars/8141p-classic/12.webp"
+      ],
+      "specs": [
+        {
+          "label": "Body",
+          "value": "Mahogany with quilted maple top"
+        },
+        {
+          "label": "Neck",
+          "value": "Laminated Maple / Bubinga / Blackwood, set-neck"
+        },
+        {
+          "label": "Fingerboard",
+          "value": "Ebony, maple/blackwood binding"
+        },
+        {
+          "label": "Frets",
+          "value": "24 jumbo CN, rounded ends"
+        },
+        {
+          "label": "Scale",
+          "value": "25.5\""
+        },
+        {
+          "label": "Pickups",
+          "value": "Railhammer Reeves Gabrels (bridge & neck)"
+        },
+        {
+          "label": "Electronics",
+          "value": "Dual Alpha 500K push-pull pots, toggle switch, stereo output"
+        },
+        {
+          "label": "Hardware",
+          "value": "Schaller bridge & tailpiece (nickel), M6 locking tuners, S-locks"
+        },
+        {
+          "label": "Nut",
+          "value": "Graphtech PT6643-00"
+        }
+      ]
+    }
+  ]
+}

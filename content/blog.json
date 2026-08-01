@@ -1,0 +1,22 @@
+{
+  "posts": [
+    {
+      "id": "crown-of-thorns",
+      "title": "Building the Crown of Thorns",
+      "date": "2026-07-15",
+      "published": true,
+      "image": "assets/guitars/mt-cot.png",
+      "excerpt": "How Marko Tervonen's signature MT-COT came together — from the gradient white finish to the hand-painted artwork.",
+      "body": "When Marko reached out about a signature build, I knew it had to feel like **The Crown**, not just look like it.\n\nWe started from the 8141 P Classic platform and reworked the finish into a gradient that fades from transparent white across the body to near-black at the headstock. The *Crown of Thorns* artwork is painted by hand — no decals, no shortcuts.\n\n## The details that matter\n\n- Ebony fingerboard with a compound 12\"–16\" radius\n- EMG 81 into an Evertune bridge for rock-solid tuning\n- A dual-LED battery indicator built right into the volume knob\n\nThis one took months. Worth every hour."
+    },
+    {
+      "id": "why-i-pick-wood-by-hand",
+      "title": "Why I pick every piece of wood by hand",
+      "date": "2026-06-28",
+      "published": true,
+      "image": "assets/guitars/8141s-trans.png",
+      "excerpt": "The wood decides half the sound. Here's why I never order tonewood from a photo.",
+      "body": "People ask why I don't just order tonewood in bulk. Simple: **the wood decides half the sound.**\n\nEvery top I use for a transparent finish gets chosen in person. I'm looking at grain, weight, stiffness and how it rings when I tap it. Two boards from the same tree can behave completely differently.\n\nThat's the whole point of a handbuilt guitar. It isn't a product off a shelf — it's this piece of wood, for this player.\n\nToday is a great day to play guitar."
+    }
+  ]
+}

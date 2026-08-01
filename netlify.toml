@@ -1,0 +1,17 @@
+# Static site — nothing to build, just publish the folder as-is.
+[build]
+  publish = "."
+  command = ""
+
+# Security + caching
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
