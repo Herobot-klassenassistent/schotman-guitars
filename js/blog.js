@@ -37,7 +37,7 @@
     return html;
   }
 
-  fetch("content/blog.json").then(r => r.json()).then(data => {
+  window.loadContent("blog").then(data => {
     const posts = (data.posts || []).filter(p => p.published !== false)
       .sort((a, b) => new Date(b.date) - new Date(a.date));
 

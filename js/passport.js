@@ -5,7 +5,7 @@
   if (!el) return;
   const id = new URLSearchParams(location.search).get("id");
 
-  fetch("content/shop.json").then(r => r.json()).then(data => {
+  window.loadContent("shop").then(data => {
     const list = data.guitars || [];
     const g = list.find(x => x.id === id && x.passport) || list.find(x => x.passport) || list[0];
     if (!g) { el.innerHTML = '<div class="gp__loading">No passport found. <a href="index.html#shop">Back to the shop →</a></div>'; return; }

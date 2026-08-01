@@ -1,4 +1,13 @@
 /* ===== Schotman Guitars — interactions ===== */
+
+/* Load shop/blog content: prefer live edits (Netlify function/Blobs),
+   fall back to the committed JSON (local dev or if functions are unavailable). */
+window.loadContent = function (type) {
+  return fetch(`/.netlify/functions/content-get?type=${type}`)
+    .then((r) => { if (!r.ok) throw new Error("fn"); return r.json(); })
+    .catch(() => fetch(`content/${type}.json`).then((r) => r.json()));
+};
+
 (function () {
   "use strict";
   const $ = (s, c = document) => c.querySelector(s);
@@ -83,7 +92,7 @@
     : `<span class="price">${money(g.price, g.currency)}</span>`;
   const saleBadge = (g) => onSale(g) ? `<span class="pcard__badge badge--sale">Sale −${Math.round((1 - g.salePrice / g.price) * 100)}%</span>` : "";
 
-  fetch("content/shop.json").then(r => r.json()).then(data => {
+  window.loadContent("shop").then(data => {
     const list = data.guitars || [];
 
     /* showcase = featured (or first 3) */

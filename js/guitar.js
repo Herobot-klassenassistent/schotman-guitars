@@ -8,7 +8,7 @@
   const eur = (n, c = "EUR") => new Intl.NumberFormat("nl-NL", { style: "currency", currency: c, maximumFractionDigits: 0 }).format(n);
   const statusLabel = { "in-stock": "In stock", sold: "Sold", reserved: "Reserved", new: "New" };
 
-  fetch("content/shop.json").then(r => r.json()).then(data => {
+  window.loadContent("shop").then(data => {
     const list = data.guitars || [];
     const g = list.find(x => x.id === id) || list[0];
     if (!g) { gp.innerHTML = '<div class="gp__loading">Guitar not found. <a href="index.html#shop">Back to the shop →</a></div>'; return; }

@@ -1,18 +1,14 @@
-# The site itself is static; the build step only compiles the TinaCMS editor (/admin).
-# The "|| echo" keeps deploys working even before the Tina Cloud keys are set —
-# the site always publishes; the editor appears once TINA env vars exist.
+# Static site assembled into ./dist (keeps node_modules out of the deploy).
+# The editor at /admin talks to the serverless functions in netlify/functions,
+# which store content + photos in Netlify Blobs. No external CMS, no rebuilds.
 [build]
   publish = "dist"
-  command = "npm ci && (npx tinacms build || echo 'Tina admin build skipped — set NEXT_PUBLIC_TINA_CLIENT_ID + TINA_TOKEN') && bash scripts/assemble-dist.sh"
+  command = "bash scripts/assemble-dist.sh"
+  functions = "netlify/functions"
 
-[build.environment]
-  NODE_VERSION = "20"
-
-# Security + caching
 [[headers]]
   for = "/*"
   [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
 

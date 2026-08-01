@@ -1,6 +1,4 @@
 node_modules/
 .DS_Store
 .netlify/
-tina/__generated__/
-admin/
 dist/

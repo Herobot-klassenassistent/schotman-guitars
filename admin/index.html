@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex" />
+<title>Schotman — Beheer</title>
+<link rel="icon" href="/assets/img/logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body class="adm">
+
+<!-- LOGIN -->
+<div class="adm-login" id="admLogin">
+  <div class="adm-login__box">
+    <img src="/assets/img/logo.png" alt="Schotman" class="adm-login__logo" />
+    <h1>Beheer</h1>
+    <p>Log in om je gitaren en blog te bewerken.</p>
+    <input type="password" id="admPw" placeholder="Wachtwoord" autocomplete="current-password" />
+    <button id="admLoginBtn" class="btn btn--gold btn--full">Inloggen</button>
+    <p class="adm-login__err" id="admErr"></p>
+  </div>
+</div>
+
+<!-- APP -->
+<div class="adm-app" id="admApp" hidden>
+  <header class="adm-bar">
+    <img src="/assets/img/logo.png" alt="Schotman" class="adm-bar__logo" />
+    <nav class="adm-tabs">
+      <button class="adm-tab is-active" data-tab="guitars">🎸 Gitaren</button>
+      <button class="adm-tab" data-tab="blog">📝 Blog</button>
+    </nav>
+    <div class="adm-bar__right">
+      <a href="/" target="_blank" class="adm-view">Bekijk site ↗</a>
+      <button class="btn btn--gold" id="admSave">Opslaan &amp; publiceren</button>
+    </div>
+  </header>
+  <p class="adm-status" id="admStatus"></p>
+
+  <main class="adm-main">
+    <section id="paneGuitars">
+      <div class="adm-list" id="listGuitars"></div>
+      <button class="adm-add" data-add="guitar">+ Gitaar toevoegen</button>
+    </section>
+    <section id="paneBlog" hidden>
+      <div class="adm-list" id="listBlog"></div>
+      <button class="adm-add" data-add="post">+ Blogbericht toevoegen</button>
+    </section>
+  </main>
+</div>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
