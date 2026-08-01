@@ -31,21 +31,38 @@ assets/audio/         Drop stock.wav + schotman.wav here for the real A/B demo
 
 ---
 
-## Deploy to Netlify (one time)
-1. Put this folder in a **GitHub repo** (Robert or you own it).
-2. On Netlify: **Add new site → Import from Git → pick the repo.**
-   Build command: *(empty)*, Publish directory: `.` (already set in `netlify.toml`).
-3. Deploy. Netlify gives you a URL; point `schotman.com` at it under Domain settings.
+## Live deployment (current)
+- **Live site:** https://schotman.netlify.app  (Netlify team: ToneSculpter)
+- **Repo:** https://github.com/Herobot-klassenassistent/schotman-guitars  (branch `main`)
+- Deploys are currently pushed manually with `netlify deploy --prod --dir .`.
+  Once the repo is linked in the Netlify UI, every `git push` (and every CMS save)
+  auto-deploys.
 
-### Turn on the phone editor (Decap CMS)
-So Robert can add/edit/sell guitars from his phone with no code:
-1. Netlify site → **Integrations / Identity → Enable Identity.**
-2. Identity → **Registration = Invite only** (so only Robert can log in).
-3. Identity → **Services → enable Git Gateway.**
-4. Identity → **Invite users** → invite Robert's email.
-5. Robert opens the invite email **on his phone**, sets a password, and is taken
-   straight to the editor. Bookmark **`schotman.com/admin`** to his home screen —
-   it behaves like an app.
+### Turn on the phone editor (Decap CMS, GitHub backend)
+Netlify Identity is deprecated for new sites, so the CMS uses the **GitHub backend**
+with a small OAuth function (`netlify/functions/auth.js` + `callback.js`, already
+deployed). To finish activation (a ~10-min, browser-only job — needs a GitHub OAuth
+app + secret, which only the site owner should create):
+
+1. **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
+   - Homepage URL: `https://schotman.netlify.app`
+   - Authorization callback URL: `https://schotman.netlify.app/.netlify/functions/callback`
+   - Note the **Client ID** and generate a **Client Secret**.
+2. **Netlify → Site config → Environment variables** — add:
+   - `GITHUB_CLIENT_ID` = the client id
+   - `GITHUB_CLIENT_SECRET` = the client secret
+   then redeploy (or trigger a deploy).
+3. **Netlify → Site config → Build & deploy → Link repository** → authorize the
+   Netlify GitHub App on `schotman-guitars` (this makes CMS saves auto-publish).
+4. **Give Robert write access:** add his GitHub account as a collaborator on the
+   repo (or transfer the repo to his GitHub). He logs in at `/admin` with GitHub.
+
+**Moving to Robert's own accounts later** (as planned): transfer the GitHub repo to
+his account, update `repo:` in `admin/config.yml`, transfer the Netlify site to his
+team, and redo steps 1–2 with an OAuth app on his account. Everything else stays.
+
+To make it feel like an app: open `schotman.netlify.app/admin` on the phone and
+"Add to Home Screen".
 
 The editor (at `/admin`) has two sections:
 
