@@ -3,3 +3,4 @@ node_modules/
 .netlify/
 tina/__generated__/
 admin/
+dist/

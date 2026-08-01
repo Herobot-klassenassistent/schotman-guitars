@@ -2,8 +2,8 @@
 # The "|| echo" keeps deploys working even before the Tina Cloud keys are set —
 # the site always publishes; the editor appears once TINA env vars exist.
 [build]
-  publish = "."
-  command = "npm ci && (npx tinacms build || echo 'Tina admin build skipped — set NEXT_PUBLIC_TINA_CLIENT_ID + TINA_TOKEN')"
+  publish = "dist"
+  command = "npm ci && (npx tinacms build || echo 'Tina admin build skipped — set NEXT_PUBLIC_TINA_CLIENT_ID + TINA_TOKEN') && bash scripts/assemble-dist.sh"
 
 [build.environment]
   NODE_VERSION = "20"
