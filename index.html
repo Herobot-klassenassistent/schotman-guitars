@@ -266,16 +266,6 @@
   <p class="footer__fine">© <span id="year"></span> Schotman Guitars. Today is a great day to play guitar.</p>
 </footer>
 
-<!-- Netlify Identity: handles Robert's invite/login link, sends him to the editor -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    netlifyIdentity.on("init", (user) => {
-      if (!user) netlifyIdentity.on("login", () => { document.location.href = "/admin/"; });
-    });
-  }
-</script>
-
 <script src="js/main.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/builder.js"></script>

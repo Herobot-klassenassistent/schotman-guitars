@@ -1,8 +1,12 @@
-# Static site — nothing to build, just publish the folder as-is.
+# The site itself is static; the build step only compiles the TinaCMS editor (/admin).
+# The "|| echo" keeps deploys working even before the Tina Cloud keys are set —
+# the site always publishes; the editor appears once TINA env vars exist.
 [build]
   publish = "."
-  command = ""
-  functions = "netlify/functions"
+  command = "npm ci && (npx tinacms build || echo 'Tina admin build skipped — set NEXT_PUBLIC_TINA_CLIENT_ID + TINA_TOKEN')"
+
+[build.environment]
+  NODE_VERSION = "20"
 
 # Security + caching
 [[headers]]

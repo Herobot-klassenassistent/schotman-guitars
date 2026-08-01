@@ -34,32 +34,33 @@ assets/audio/         Drop stock.wav + schotman.wav here for the real A/B demo
 ## Live deployment (current)
 - **Live site:** https://schotman.netlify.app  (Netlify team: ToneSculpter)
 - **Repo:** https://github.com/Herobot-klassenassistent/schotman-guitars  (branch `main`)
-- Deploys are currently pushed manually with `netlify deploy --prod --dir .`.
-  Once the repo is linked in the Netlify UI, every `git push` (and every CMS save)
-  auto-deploys.
+- The site is static; the Netlify **build step only compiles the TinaCMS editor**
+  into `/admin` (see `netlify.toml`). Content is read at runtime from
+  `content/shop.json` + `content/blog.json`, which Tina edits in place.
 
-### Turn on the phone editor (Decap CMS, GitHub backend)
-Netlify Identity is deprecated for new sites, so the CMS uses the **GitHub backend**
-with a small OAuth function (`netlify/functions/auth.js` + `callback.js`, already
-deployed). To finish activation (a ~10-min, browser-only job — needs a GitHub OAuth
-app + secret, which only the site owner should create):
+## The phone editor — TinaCMS (friendly email login, no GitHub needed for Robert)
+The CMS is **TinaCMS** (`tina/config.ts`). Robert logs in with **email** via Tina
+Cloud — no GitHub account. To activate (browser + account setup only the owner can do,
+~10 min):
 
-1. **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**
-   - Homepage URL: `https://schotman.netlify.app`
-   - Authorization callback URL: `https://schotman.netlify.app/.netlify/functions/callback`
-   - Note the **Client ID** and generate a **Client Secret**.
-2. **Netlify → Site config → Environment variables** — add:
-   - `GITHUB_CLIENT_ID` = the client id
-   - `GITHUB_CLIENT_SECRET` = the client secret
-   then redeploy (or trigger a deploy).
-3. **Netlify → Site config → Build & deploy → Link repository** → authorize the
-   Netlify GitHub App on `schotman-guitars` (this makes CMS saves auto-publish).
-4. **Give Robert write access:** add his GitHub account as a collaborator on the
-   repo (or transfer the repo to his GitHub). He logs in at `/admin` with GitHub.
+1. **Create a Tina Cloud project** at https://app.tina.io → "Create project" →
+   connect the GitHub repo `Herobot-klassenassistent/schotman-guitars`.
+2. In the project settings, copy the **Client ID** and create a **Read/Write Token**.
+3. **Netlify → Site config → Environment variables** — add:
+   - `NEXT_PUBLIC_TINA_CLIENT_ID` = the Tina client id
+   - `TINA_TOKEN` = the Tina read/write token
+4. **Netlify → Build & deploy → Link repository** to the GitHub repo (authorize the
+   Netlify GitHub App) so every save/commit rebuilds the site. Then trigger a deploy.
+5. **Invite Robert** in Tina Cloud (Users → invite by email). He gets an email, sets
+   a password, and edits at `schotman.netlify.app/admin`.
+
+Local editing without the cloud: `npm run dev` (opens Tina on a local server).
+Build the editor locally to test: `npm run build:local`.
 
 **Moving to Robert's own accounts later** (as planned): transfer the GitHub repo to
-his account, update `repo:` in `admin/config.yml`, transfer the Netlify site to his
-team, and redo steps 1–2 with an OAuth app on his account. Everything else stays.
+his account, transfer the Netlify site to his team, create a Tina Cloud project on
+his account and swap the two env vars. `tina/config.ts` only needs its `repo`/branch
+left as-is (branch is read from env). Everything else stays.
 
 To make it feel like an app: open `schotman.netlify.app/admin` on the phone and
 "Add to Home Screen".

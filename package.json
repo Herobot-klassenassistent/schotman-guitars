@@ -1,0 +1,27 @@
+{
+  "name": "schotman-guitars",
+  "version": "1.0.0",
+  "description": "A single-page, continuous-scroll site with a cinematic dark look, floating 3D-tilt guitars, an audio A/B \"hear the difference\" tool, a \"Design your Schotman\" configurator, an Instagram-style gallery, the Marko Tervonen film, and a shop Robert can update from his phone.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tinacms dev -c \"npx --yes http-server . -p 8777 -c-1\"",
+    "build": "tinacms build",
+    "build:local": "tinacms build --local --skip-cloud-checks --skip-search-index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Herobot-klassenassistent/schotman-guitars.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Herobot-klassenassistent/schotman-guitars/issues"
+  },
+  "homepage": "https://github.com/Herobot-klassenassistent/schotman-guitars#readme",
+  "dependencies": {
+    "@tinacms/cli": "^2.5.6",
+    "tinacms": "^3.11.0"
+  }
+}
