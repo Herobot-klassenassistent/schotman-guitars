@@ -11,12 +11,13 @@ for item in index.html guitar.html workshop.html blog.html post.html passport.ht
   [ -e "$item" ] && cp -R "$item" dist/
 done
 
-# the compiled TinaCMS editor (present only when Tina env vars are set)
-if [ -d admin ]; then
+# the compiled TinaCMS editor — only ship it if it's a real PRODUCTION build.
+# (a failed/dev build leaves an admin/index.html that points at localhost:4001)
+if [ -f admin/index.html ] && ! grep -q "localhost:4001" admin/index.html; then
   cp -R admin dist/
-  echo "assemble-dist: included /admin editor"
+  echo "assemble-dist: included /admin editor (production build)"
 else
-  echo "assemble-dist: no /admin (Tina build skipped — set TINA env vars)"
+  echo "assemble-dist: skipped /admin (no valid production build — check Tina Cloud connection)"
 fi
 
 echo "assemble-dist: done -> $(du -sh dist | cut -f1)"
