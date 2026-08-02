@@ -4,7 +4,8 @@ import { getStore } from "@netlify/blobs";
 
 export default async (req) => {
   const type = new URL(req.url).searchParams.get("type") === "blog" ? "blog" : "shop";
-  const store = getStore("content");
+  // strong consistency so edits show up immediately (Blobs is eventually-consistent by default)
+  const store = getStore({ name: "content", consistency: "strong" });
   let data = await store.get(type, { type: "json" });
   if (!data) {
     try {

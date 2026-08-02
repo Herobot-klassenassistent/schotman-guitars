@@ -12,7 +12,7 @@ export default async (req) => {
   const type = body.type === "blog" ? "blog" : "shop";
   if (!body.data || typeof body.data !== "object") return new Response("No data", { status: 400 });
 
-  const store = getStore("content");
+  const store = getStore({ name: "content", consistency: "strong" });
   await store.setJSON(type, body.data);
   return Response.json({ ok: true });
 };
